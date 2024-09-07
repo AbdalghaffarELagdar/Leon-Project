@@ -1,0 +1,380 @@
+:root {
+    --main-color:#0ec8f7;
+    --secondary-color: #2c4755;
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Start first Components بتاع جزء من servesise  and portfolio*/
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+/*هنا عملنا مقاس ل الموبايل علشان المقاس مكنش هيبقي مظبوط*/
+@media (max-width: 767px){
+  .special-heading{
+      font-size: 60px;
+  }
+  .special-heading + p {
+      margin-top: -20px;
+    }
+}
+  /* end first Components بتاع جزء من servesise */
+
+.body{
+    font-family: "work sans", sans-serif;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*small*/
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+/*mediam*/
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+/*larg*/
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+/*اللي فوق ده كله global rules حاجات اساسيه علشان تاثر علي جميع العناصر*/
+
+/*start project + we start with header*/
+.Header{
+    padding: 20px;
+}
+.Header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.Header .logo{
+    width: 60px;
+}
+.Header .links{
+    position: relative;
+}
+.Header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+  }
+.Header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.Header .links .icon span{
+    background-color: black;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.Header .links .icon span:first-child{
+    width: 100%;
+}
+.Header .links .icon span:nth-child(2){
+    width: 60%;
+    transition: .3s;
+}
+.Header .links .icon span:last-child{
+    width: 100%;
+}
+.Header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute; /*هنا بقوله اتحرك علي اساس الاب بتاعك اللي هو Header ولو لغيتها هتلاقي العناصر خرجت برهheader*/
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;/*لو شيلتها هتخلي العناصر ظاهره ظاهره بس هتختفي علشان هتكون خرت حدود header ده في حاله اني لغيت z-index*/ 
+    z-index: 1;
+
+  }
+  .Header .links ul ::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+  }
+  .Header .links:hover ul{
+    display: block;
+  }
+  .Header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition:0.3s;
+    border-bottom: 1px solid #ddd
+  }
+  .Header .links ul li a:hover {
+    padding-left: 25px;
+  }
+
+  /*start landing*/
+  .landing{
+    background-image: url(../photo/pngtree-programmer-automating-with-3d-rendering-robot-while-operating-computer-notebook-image_3715986.jpg);
+    background-size:  cover;
+    height:calc(100vh - 64px) ;
+    position: relative;
+  }
+  .landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 320px; 
+    max-width: 100%;
+  }
+  .landing .intro-text h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+  }
+  .landing .intro-text p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: antiquewhite;
+  }
+  /* End Landing Section */
+
+ /* Start Features */
+ .features {
+    padding-top:60px;
+    padding-bottom:60px;
+    background-color: #f6f6f6;
+  }
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  .features .feat {
+    padding: 20px;
+    text-align: center;
+  }
+  .features .feat i {
+    color: var(--main-color);
+  }
+  .features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+  }
+  .features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+  }
+  /* End Features */
+
+  /* Start first Components بتاع جزء من servesise */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+  }
+  .special-heading + p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+  }
+  /*هنا عملنا مقاس ل الموبايل علشان المقاس مكنش هيبقي مظبوط*/
+  @media (max-width: 767px){
+    .special-heading{
+        font-size: 60px;
+    }
+    .special-heading + p {
+        margin-top: -20px;
+      }
+  }
+    /* end first Components بتاع جزء من servesise */
+
+    /*  هنا هنعمل الاربع عناصر و الصوره  من جزء services*/
+    .services {
+        padding-top: 60px;
+        padding-bottom:60px;
+      }
+      .services .services-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;
+        margin-top: 100px;
+      }
+      .services .services-content .srv {
+        display: flex;
+        margin-bottom: 40px;}
+        
+        @media (max-width: 767px) {
+          .services .services-content .srv {
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+        .services .services-content .srv i {
+          color: var(--main-color);
+          flex-basis: 60px; /*ده بديل width and height*/
+        }
+        .services .services-content .srv .text {
+          flex: 1;
+        }
+        .services .services-content .srv .text h3 {
+          margin: 0 0 20px;
+        }
+        .services .services-content .srv .text p {
+          color: #444;
+          font-weight: 300;
+          line-height: 1.6;
+        }
+
+        .services .services-content .image {
+          text-align: center;
+          position: relative;
+        }
+        .services .services-content .image::before {
+          content: "";
+          background-color: var(--secondary-color);
+          width: 50px;
+          height: calc(100% + 100px);
+          top: -50px;
+          position: absolute;
+          right: 0;
+          z-index: -1;
+        }
+        .services .services-content .image img {
+          width: 260px;
+        }
+        
+        @media (max-width: 1199px) {
+          .image-column {
+            display: none;
+          }
+        }
+
+        .portfolio{
+          padding-top: 60px;
+          padding-bottom:60px;
+        }
+        .portfolio .portfolio-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-gap: 30px;
+          margin-top: 80px;
+        }
+        .portfolio .card{
+          background-color: rgb(255, 255, 255);
+        }
+        .portfolio .card img {
+          max-width: 100%;
+          max-height: 100px;
+        }
+        .portfolio .portfolio-content .card .info {
+          padding: 20px;
+        }
+        .portfolio .portfolio-content .card .info h3 {
+          margin: 0;
+        }
+        .portfolio .portfolio-content .card .info p {
+          color: #777;
+          line-height: 1.6;
+          margin-bottom: 0;
+        }
+        /* End Portfolio */
+
+        .contact{
+          padding-top: 60px;
+          padding-bottom:60px;
+          background-color: #ddd;
+        }
+        .contact .info {
+          padding-top: 60px;
+          padding-bottom:60px;
+          text-align: center;
+        }
+        .contact .info .label {
+          font-size: 35px;
+          font-weight: 800;
+          color: var(--secondary-color);
+          letter-spacing: -2px;
+          margin-bottom: 15px;
+        }
+        .contact .info .link {
+          display: block;
+          font-size: 35px;
+          font-weight: 800;
+          color: var(--main-color);
+          text-decoration: none;
+        }
+        .contact .info .social {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+          font-size: 16px;
+        }
+        .contact .info .social i {
+          margin-left: 10px;
+          color: var(--secondary-color);
+        }
+
+        @media (max-width: 767px) {
+          .contact .info .label,
+          .contact .info .link {
+            font-size: 20px;
+          }
+        }
+        /* End Contact */
+
+        /* Start Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
+
+        
+        
+
+
+
+
